@@ -1,6 +1,6 @@
 import { ResultSuccess } from "../../../src/application/contracts/result/result-success";
 import { PaymentScheduleEnum } from "../../../src/application/enums/payment-schedule-enum";
-import { Mortgage } from "../../../src/domain/entities/Mortgage";
+import { Mortgage } from "../../../src/domain/entities/mortgage";
 import { MortgageService } from "../../../src/infrastructure/mortgage-service/mortgage-service";
 
 const createService = (): MortgageService => {

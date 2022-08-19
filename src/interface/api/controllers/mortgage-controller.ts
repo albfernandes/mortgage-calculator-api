@@ -3,7 +3,7 @@ import { Route, Controller, Tags, Get, Response, Query } from "tsoa";
 import { PaymentScheduleEnum } from "../../../application/enums/payment-schedule-enum";
 import { GetPaymentPerScheduleCommand } from "../../../application/get-payment-per-schedule/get-payment-per-schedule-command";
 import { GetPaymentPerScheduleCommandHandler } from "../../../application/get-payment-per-schedule/get-payment-per-schedule-command-handler";
-import { Mortgage } from "../../../domain/entities/Mortgage";
+import { Mortgage } from "../../../domain/entities/mortgage";
 import { HttpStatusCode } from "../../../infrastructure/http/http-status-code";
 import { handleResult } from "../handle-result";
 import { ErrorResult, SmallInt } from "../types";

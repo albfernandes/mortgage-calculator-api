@@ -1,4 +1,4 @@
-import { Mortgage } from "../../domain/entities/Mortgage";
+import { Mortgage } from "../../domain/entities/mortgage";
 import { PaymentScheduleEnum } from "../enums/payment-schedule-enum";
 import { Result } from "./result/result";
 

@@ -1,5 +1,5 @@
 import { injectable, inject } from "inversify";
-import { Mortgage } from "../../domain/entities/Mortgage";
+import { Mortgage } from "../../domain/entities/mortgage";
 import { Settings } from "../../infrastructure/configurations/settings";
 import { MortgageService } from "../../infrastructure/mortgage-service/mortgage-service";
 import { CommandHandler } from "../contracts/command-handler";

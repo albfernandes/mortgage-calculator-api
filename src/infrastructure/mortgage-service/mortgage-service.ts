@@ -5,7 +5,7 @@ import { ResultError } from "../../application/contracts/result/result-error";
 import { ResultSuccess } from "../../application/contracts/result/result-success";
 import { PaymentScheduleEnum } from "../../application/enums/payment-schedule-enum";
 import { PaymentsPerMonth } from "../../application/get-payment-per-schedule/payments-per-month-converter";
-import { Mortgage } from "../../domain/entities/Mortgage";
+import { Mortgage } from "../../domain/entities/mortgage";
 
 const MONTHS_PER_YEAR = 12;
 const PERCENT = 100;

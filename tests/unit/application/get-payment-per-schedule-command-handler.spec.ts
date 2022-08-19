@@ -4,7 +4,7 @@ import { NonFunctionProperties } from "../../../src/application/contracts/types"
 import { PaymentScheduleEnum } from "../../../src/application/enums/payment-schedule-enum";
 import { GetPaymentPerScheduleCommand } from "../../../src/application/get-payment-per-schedule/get-payment-per-schedule-command";
 import { GetPaymentPerScheduleCommandHandler } from "../../../src/application/get-payment-per-schedule/get-payment-per-schedule-command-handler";
-import { Mortgage } from "../../../src/domain/entities/Mortgage";
+import { Mortgage } from "../../../src/domain/entities/mortgage";
 import { Settings } from "../../../src/infrastructure/configurations/settings";
 import { MortgageService } from "../../../src/infrastructure/mortgage-service/mortgage-service";
 
