@@ -20,7 +20,7 @@ This project has a strategy to tests using automated tests (only in stock-servic
 
 ## Start the application
 
-To start the applications, run the command: `docker-compose up` in the root of node-challenge folder
+To start the applications, run the command: `docker-compose up` in the root of mortgage-api-calculator folder
 
 ## API Documentation
 
