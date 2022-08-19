@@ -1,0 +1,115 @@
+components:
+    examples: {}
+    headers: {}
+    parameters: {}
+    requestBodies: {}
+    responses: {}
+    schemas:
+        Mortgage:
+            properties:
+                paymentPerPaymentSchedule:
+                    type: number
+                    format: double
+            required:
+                - paymentPerPaymentSchedule
+            type: object
+            additionalProperties: false
+        ErrorResult:
+            properties:
+                message:
+                    type: string
+            required:
+                - message
+            type: object
+            additionalProperties: false
+        SmallInt:
+            type: integer
+            format: int32
+            minimum: 0
+            maximum: 1000
+        PaymentScheduleEnum:
+            enum:
+                - weekly
+                - bi-weekly
+                - monthly
+            type: string
+    securitySchemes: {}
+info:
+    title: mortgage-api-calculator
+    version: 1.0.0
+    license:
+        name: ISC
+    contact: {}
+openapi: 3.0.0
+paths:
+    /v1/payment-schedule:
+        get:
+            operationId: GetPaymentPerPaymentSchedule
+            responses:
+                '200':
+                    description: Ok
+                    content:
+                        application/json:
+                            schema:
+                                anyOf:
+                                    - {$ref: '#/components/schemas/Mortgage'}
+                                    - {$ref: '#/components/schemas/ErrorResult'}
+                '400':
+                    description: ""
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResult'
+                '404':
+                    description: ""
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResult'
+                '500':
+                    description: ""
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/ErrorResult'
+            description: 'Retrivies payment per payment schedule.'
+            tags:
+                - 'Payment per payment schedule'
+            security: []
+            parameters:
+                -
+                    in: query
+                    name: propertyPrice
+                    required: true
+                    schema:
+                        format: double
+                        type: number
+                -
+                    in: query
+                    name: downPayment
+                    required: true
+                    schema:
+                        format: double
+                        type: number
+                -
+                    in: query
+                    name: annualInterestRate
+                    required: true
+                    schema:
+                        format: double
+                        type: number
+                -
+                    in: query
+                    name: amortizationPeriod
+                    required: true
+                    schema:
+                        $ref: '#/components/schemas/SmallInt'
+                -
+                    in: query
+                    name: paymentSchedule
+                    required: true
+                    schema:
+                        $ref: '#/components/schemas/PaymentScheduleEnum'
+servers:
+    -
+        url: 'http://localhost:3000/mortgage-service/api'

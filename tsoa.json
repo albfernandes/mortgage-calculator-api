@@ -1,0 +1,19 @@
+{
+  "entryFile": "index.ts",
+  "noImplicitAdditionalProperties": "silently-remove-extras",
+  "controllerPathGlobs": ["src/interface/api/controllers/*-controller.ts"],
+  "spec": {
+    "basePath": "/mortgage-service/api",
+    "host": "localhost:3000",
+    "outputDirectory": "./docs/swagger",
+    "yaml": true,
+    "specVersion": 3,
+    "schemes": ["http", "https"]
+  },
+  "routes": {
+    "basePath": "/()(mortgage-service/api)",
+    "iocModule": "src/infrastructure/configurations/container",
+    "routesDir": "src/interface/api",
+    "routesFileName": "routes.ts"
+  }
+}

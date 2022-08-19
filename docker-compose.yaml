@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  mortgage-api:
+    container_name: mortgage-api
+    ports:
+      - 3000:3000
+    build: .
+    volumes:
+      - .:/application
+    command: sh -c "npm install && npm run start:local"
+    working_dir: /application
+    environment:
+      PORT: "3000"
+      PROPERTY_PRICE_MINIMUM_DOWN_PAYMENT: "0.2"
