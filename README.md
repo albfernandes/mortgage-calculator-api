@@ -14,7 +14,7 @@ I used the tslint to do some static code analysis, to execute the lint, run the 
 
 ## Automated Tests
 
-This project has a strategy to tests using automated tests (only in stock-service). To execute the tests run the command `npm test` or `make test`(in this case it will run tests inside a docker container).
+This project has a strategy to tests using automated tests. To execute the tests run the command `npm test` or `make test`(in this case it will run tests inside a docker container).
 
 ![Test coverage](/docs//images/test-coverage.jpg)
 
