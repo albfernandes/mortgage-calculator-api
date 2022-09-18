@@ -4,7 +4,9 @@ services:
   mortgage-api:
     container_name: mortgage-api
     ports:
-      - 3000:3000
+      - "3000:3000"
+      - "5678:5678"
+      - "9229:9229"
     build: .
     volumes:
       - .:/application
