@@ -17,5 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Setup docker
+      run: docker-compose up -d
+
     - name: Run tests
-      run: make test
+      run: docker-compose exec -T mortgage-api npm test
