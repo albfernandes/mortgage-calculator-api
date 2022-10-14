@@ -1,13 +1,13 @@
-import type { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
+import type { APIGatewayProxyEvent, Context } from "aws-lambda";
+import awsServerlessExpress from "aws-serverless-express";
+import * as http from "http";
+import { container } from "./src/infrastructure/configurations/container";
+import { ProcessHttpRequest } from "./src/interface/api/process-http-request";
 
-export const handle = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Go Serverless v1.0! Your function executed successfully!",
-      input: event,
-    }),
-  };
+const app = container.get(ProcessHttpRequest).configure();
 
-  return response;
+const server = awsServerlessExpress.createServer(app);
+
+export const handle = async (event: APIGatewayProxyEvent, context: Context): Promise<http.Server> => {
+  return awsServerlessExpress.proxy(server, event, context);
 };

@@ -14,8 +14,8 @@ functions:
     memorySize: 128 # mb
     events:
       - http:
-          path: /
-          method: get
+          path: /{proxy+}
+          method: any
 
 plugins:
   - serverless-plugin-typescript

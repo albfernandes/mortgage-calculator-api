@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/aws-serverless-express": "^3.3.5",
     "@types/express": "^4.17.11",
     "@types/faker": "^5.1.7",
     "@types/jest": "^26.0.20",
@@ -48,6 +49,7 @@
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.107",
+    "aws-serverless-express": "^3.4.0",
     "express": "^4.17.1",
     "inversify": "^5.0.5",
     "reflect-metadata": "^0.1.13",
