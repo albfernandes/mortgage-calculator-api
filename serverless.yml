@@ -10,6 +10,8 @@ provider:
 functions:
   api:
     handler: handler.handle
+    timeout: 60 # seconds
+    memorySize: 128 # mb
     events:
       - http:
           path: /
