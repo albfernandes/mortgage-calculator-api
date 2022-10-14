@@ -13,9 +13,8 @@ functions:
     timeout: 30 # seconds
     memorySize: 128 # mb
     events:
-      - http:
-          path: /{proxy+}
-          method: any
+      - http: ANY /
+      - http: ANY /{any+}
 
 plugins:
   - serverless-plugin-typescript
