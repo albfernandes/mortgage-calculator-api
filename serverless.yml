@@ -1,0 +1,19 @@
+service: mortgage-calculator-api
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  api:
+    handler: handler.handle
+    events:
+      - http:
+          path: /
+          method: get
+
+plugins:
+  - serverless-plugin-typescript
