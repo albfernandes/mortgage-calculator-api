@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import type { APIGatewayProxyEvent, Context } from "aws-lambda";
 import awsServerlessExpress from "aws-serverless-express";
 import * as http from "http";
