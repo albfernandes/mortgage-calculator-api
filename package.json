@@ -53,6 +53,7 @@
     "express": "^4.17.1",
     "inversify": "^5.0.5",
     "reflect-metadata": "^0.1.13",
+    "serverless-http": "^3.0.3",
     "tsoa": "^3.5.0"
   }
 }
